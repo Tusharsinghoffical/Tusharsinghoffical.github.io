@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelance AI & Data Science Services - Tushar Singh</title>
+    <meta
+      name="description"
+      content="Professional freelance services in AI, Data Science, and Web Development. Custom AI solutions, Data Analysis, Machine Learning models, and web applications tailored to your business needs."
+    />
+    <meta name="keywords" content="Freelance AI Developer, Data Science Freelancer, Machine Learning Freelancer, Python Developer, AI Solutions, Custom Web Development, Freelance Consultant">
+    <meta name="author" content="Tushar Singh">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codewithmrsingh.onrender.com/freelancing.html">
+    <meta property="og:title" content="Freelance AI & Data Science Services - Tushar Singh">
+    <meta property="og:description" content="Professional freelance services in AI, Data Science, and Web Development. Custom AI solutions, Data Analysis, Machine Learning models, and web applications tailored to your business needs.">
+    <meta property="og:image" content="https://codewithmrsingh.onrender.com/profile.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://codewithmrsingh.onrender.com/freelancing.html">
+    <meta property="twitter:title" content="Freelance AI & Data Science Services - Tushar Singh">
+    <meta property="twitter:description" content="Professional freelance services in AI, Data Science, and Web Development. Custom AI solutions, Data Analysis, Machine Learning models, and web applications tailored to your business needs.">
+    <meta property="twitter:image" content="https://codewithmrsingh.onrender.com/profile.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://codewithmrsingh.onrender.com/freelancing.html">
+    
+    <link rel="icon" type="image/x-icon" href="profile.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    
+    <script>
+    if (location.protocol !== 'https:') {
+      location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    }
+    </script>
+    
+    <!-- Additional styles for freelancing page -->
+    <style>
+      .freelance-hero {
+        background: var(--card-bg);
+        color: var(--text-color);
+        padding: 4rem 0;
+        border-radius: var(--border-radius);
+        margin-bottom: 3rem;
+        text-align: center;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border-color);
+        background: linear-gradient(135deg, var(--card-bg), var(--bg-color));
+      }
+      
+      .service-highlight {
+        background: var(--highlight-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 800;
+      }
+      
+      .premium-badge {
+        display: inline-block;
+        background: var(--highlight-gradient);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        box-shadow: var(--shadow);
+        animation: pulse 2s infinite;
+      }
+      
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+      
+      .service-card {
+        background: var(--card-bg);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+        border-color: var(--highlight-color);
+      }
+      
+      .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--highlight-gradient);
+      }
+      
+      .service-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        background: var(--highlight-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .price-tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--highlight-gradient);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: var(--shadow);
+      }
+      
+      .features-list {
+        list-style: none;
+        margin: 1.5rem 0;
+      }
+      
+      .features-list li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+        position: relative;
+        padding-left: 1.5rem;
+      }
+      
+      .features-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--highlight-color);
+        font-weight: bold;
+      }
+      
+      .testimonials-section {
+        background: var(--card-bg);
+        padding: 4rem 0;
+        border-radius: var(--border-radius);
+        margin: 4rem 0;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border-color);
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      
+      .testimonial-card {
+        background: var(--bg-color);
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        margin: 1rem 0;
+        border: 1px solid var(--border-color);
+        transition: var(--transition);
+      }
+      
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+      
+      .client-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      
+      .packages-section {
+        margin: 4rem 0;
+      }
+      
+      .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      
+      .package-card {
+        background: var(--card-bg);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        position: relative;
+        border: 1px solid var(--border-color);
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      
+      .package-card.popular {
+        border-color: var(--highlight-color);
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+      }
+      
+      .package-card.popular .package-name {
+        color: var(--highlight-color);
+      }
+      
+      .package-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+      
+      .package-card.popular:hover {
+        transform: scale(1.05) translateY(-5px);
+      }
+      
+      .package-name {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: var(--text-color);
+      }
+      
+      .package-price {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: var(--highlight-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .package-features {
+        list-style: none;
+        margin: 2rem 0;
+      }
+      
+      .package-features li {
+        padding: 0.5rem 0;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+      }
+      
+      .package-features li:last-child {
+        border-bottom: none;
+      }
+      
+      .popular-badge {
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        background: var(--highlight-gradient);
+        color: white;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        box-shadow: var(--shadow);
+        animation: pulse 1.5s infinite;
+      }
+      
+      /* Added missing CSS for process section */
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+      
+      .process-step {
+        text-align: center;
+        padding: 2rem;
+        background: var(--card-bg);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        position: relative;
+        border: 1px solid var(--border-color);
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      
+      .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+        border-color: var(--highlight-color);
+      }
+      
+      .step-number {
+        width: 50px;
+        height: 50px;
+        background: var(--highlight-gradient);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 auto 1rem;
+        box-shadow: var(--shadow);
+      }
+      
+      .cta-section {
+        background: var(--card-bg);
+        padding: 4rem 2rem;
+        border-radius: var(--border-radius);
+        text-align: center;
+        margin: 4rem 0;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border-color);
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      
+      .cta-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .cta-content p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+      }
+      
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      
+      /* Keyframe animations for premium effects */
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .cta-buttons .btn-primary,
+        .cta-buttons .btn-secondary {
+          width: 80%;
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"><a href="index.html">Code With Mr Singh</a></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="freelancing.html" class="active">Freelancing</a></li>
+        </ul>
+
+        <button id="theme-toggle" aria-label="Toggle Theme" class="theme-btn">
+          🌙
+        </button>
+        <div class="menu-toggle">&#9776;</div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="freelance-hero" data-aos="fade-down">
+        <div class="container">
+          <span class="premium-badge">PREMIUM FREELANCING SERVICES</span>
+          <h1>Professional <span class="service-highlight">Freelancing</span> Services</h1>
+          <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+            A passionate <span class="service-highlight">Data Scientist</span>, <span class="service-highlight">Web Developer</span> and <span class="service-highlight">AI Agents Developer</span> with expertise in Python, Machine Learning, and building intelligent AI Agents. I transform complex data into actionable insights and create smart solutions that make a difference.
+          </p>
+        </div>
+      </section>
+
+      <section class="project-filters" data-aos="fade-up">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            All Services
+          </button>
+          <button class="filter-btn" data-filter="website">
+            Website
+          </button>
+          <button class="filter-btn" data-filter="ai">
+            AI Agents
+          </button>
+          <button class="filter-btn" data-filter="data">
+            Data Science and Analysis
+          </button>
+        </div>
+      </section>
+
+      <section class="service-grid">
+        <!-- Website - Static Page -->
+        <div
+          class="service-card"
+          data-category="website"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="price-tag">Starting at $90</div>
+          <div class="service-icon">📄</div>
+          <h3>Static Website</h3>
+          <p>
+            Fast-loading, responsive static websites with modern design and SEO optimization.
+          </p>
+          <ul class="features-list">
+            <li>Responsive Design</li>
+            <li>SEO Optimized</li>
+            <li>5 Pages Included</li>
+            <li>Contact Form</li>
+            <li>Google Analytics</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="card-buttons" style="margin-top: 1rem;">
+            <a href="contact.html?request=Static Website" class="btn-download">Hire Now</a>
+          </div>
+        </div>
+
+        <!-- Website - Dynamic Page -->
+        <div
+          class="service-card"
+          data-category="website"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="price-tag">Starting at $130</div>
+          <div class="service-icon">⚙️</div>
+          <h3>Dynamic Website</h3>
+          <p>
+            Interactive websites with user authentication, database integration, and CMS.
+          </p>
+          <ul class="features-list">
+            <li>User Authentication</li>
+            <li>Database Integration</li>
+            <li>Admin Dashboard</li>
+            <li>Content Management</li>
+            <li>API Integration</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="tech-tag">Front-end</span>
+            <span class="tech-tag">Back-end</span>
+            <span class="tech-tag">Database</span>
+          </div>
+          <div class="card-buttons" style="margin-top: 1rem;">
+            <a href="contact.html?request=Dynamic Website" class="btn-download">Hire Now</a>
+          </div>
+        </div>
+
+        <!-- Website - Landing Page -->
+        <div
+          class="service-card"
+          data-category="website"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div class="price-tag">Starting at $60</div>
+          <div class="service-icon">🎯</div>
+          <h3>Landing Page</h3>
+          <p>
+            High-converting landing pages optimized for marketing campaigns and lead generation.
+          </p>
+          <ul class="features-list">
+            <li>Conversion Optimized</li>
+            <li>A/B Testing Ready</li>
+            <li>Lead Capture Form</li>
+            <li>Analytics Integration</li>
+            <li>Mobile Responsive</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Optimization</span>
+          </div>
+          <div class="card-buttons" style="margin-top: 1rem;">
+            <a href="contact.html?request=Landing Page" class="btn-download">Hire Now</a>
+          </div>
+        </div>
+
+        <!-- AI Agents -->
+        <div
+          class="service-card"
+          data-category="ai"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <div class="price-tag">Starting at $499</div>
+          <div class="service-icon">🤖</div>
+          <h3>AI Agents</h3>
+          <p>
+            Intelligent AI agents for automation, research, customer service, and workflow optimization.
+          </p>
+          <ul class="features-list">
+            <li>Custom AI Solutions</li>
+            <li>Natural Language Processing</li>
+            <li>Task Automation</li>
+            <li>API Integrations</li>
+            <li>24/7 Availability</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Gemini API</span>
+            <span class="tech-tag">Automation</span>
+          </div>
+          <div class="card-buttons" style="margin-top: 1rem;">
+            <a href="contact.html?request=AI Agents" class="btn-download">Hire Now</a>
+          </div>
+        </div>
+
+        <!-- Data Science and Analysis -->
+        <div
+          class="service-card"
+          data-category="data"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <div class="price-tag">Starting at $299</div>
+          <div class="service-icon">📊</div>
+          <h3>Data Science and Analysis</h3>
+          <p>
+            Comprehensive data analysis, visualization, and insights for data-driven decision making.
+          </p>
+          <ul class="features-list">
+            <li>Data Cleaning & Processing</li>
+            <li>Statistical Analysis</li>
+            <li>Interactive Dashboards</li>
+            <li>Predictive Modeling</li>
+            <li>Detailed Reporting</li>
+          </ul>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Power BI</span>
+          </div>
+          <div class="card-buttons" style="margin-top: 1rem;">
+            <a href="contact.html?request=Data Science" class="btn-download">Hire Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="packages-section" data-aos="fade-up">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Freelancing <span class="service-highlight">Packages</span></h2>
+        <div class="packages-grid">
+          <div class="package-card" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="package-name">Starter</h3>
+            <div class="package-price">$299</div>
+            <ul class="package-features">
+              <li>Basic Website (5 pages)</li>
+              <li>Responsive Design</li>
+              <li>SEO Basic Setup</li>
+              <li>1 Week Delivery</li>
+              <li>Email Support</li>
+            </ul>
+            <a href="contact.html?request=Starter Package" class="btn-primary" style="width: 100%; text-align: center;">Get Started</a>
+          </div>
+          
+          <div class="package-card popular" data-aos="fade-up" data-aos-delay="200">
+            <div class="popular-badge">MOST POPULAR</div>
+            <h3 class="package-name">Professional</h3>
+            <div class="package-price">$999</div>
+            <ul class="package-features">
+              <li>Dynamic Website</li>
+              <li>User Authentication</li>
+              <li>Database Integration</li>
+              <li>Admin Dashboard</li>
+              <li>2 Weeks Delivery</li>
+              <li>Priority Support</li>
+            </ul>
+            <a href="contact.html?request=Professional Package" class="btn-primary" style="width: 100%; text-align: center;">Get Started</a>
+          </div>
+          
+          <div class="package-card" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="package-name">Enterprise</h3>
+            <div class="package-price">Custom</div>
+            <ul class="package-features">
+              <li>Custom AI Solutions</li>
+              <li>Data Analysis & Insights</li>
+              <li>Full Project Management</li>
+              <li>Dedicated Support</li>
+              <li>Monthly Maintenance</li>
+              <li>Priority Development</li>
+            </ul>
+            <a href="contact.html?request=Enterprise Package" class="btn-primary" style="width: 100%; text-align: center;">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials-section" data-aos="fade-up">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Client <span class="service-highlight">Testimonials</span></h2>
+        <div class="container">
+          <div class="testimonial-card">
+            <p>"Tushar delivered our e-commerce website ahead of schedule and exceeded our expectations. The attention to detail and technical expertise is outstanding."</p>
+            <div class="client-info">
+              <div>
+                <strong>Rajesh Kumar</strong><br>
+                CEO, TechStart Solutions
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <p>"The AI chatbot Tushar built for our customer service has reduced our response time by 80%. Truly transformative technology that has improved our business operations."</p>
+            <div class="client-info">
+              <div>
+                <strong>Priya Sharma</strong><br>
+                Director, HealthPlus Clinic
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="process-section" data-aos="fade-up">
+        <h2>My Freelancing <span class="service-highlight">Process</span></h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Project Discovery</h3>
+            <p>
+              Understanding your requirements, goals, and timeline to create a comprehensive project plan.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Proposal & Agreement</h3>
+            <p>
+              Detailed project proposal with scope, timeline, and pricing. Signing of agreement.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Design & Development</h3>
+            <p>
+              Creating the solution with regular updates and milestone reviews.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Deployment & Support</h3>
+            <p>
+              Launching the project with ongoing support and maintenance options.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" data-aos="fade-up">
+        <div class="cta-content">
+          <h2>Ready to Start Your Project ?</h2>
+          <p>
+            Let's discuss how I can help bring your ideas to life with professional freelancing services.
+          </p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn-primary">Get In Touch</a>
+            <a href="projects.html" class="btn-secondary">View My Work</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <!-- About Section -->
+        <div class="footer-section about" data-aos="fade-up">
+          <div class="logo">
+            <a href="index.html"><h3>Code With Mr Singh</h3></a>
+          </div>
+          <p>
+            AI & Data Scientist | Web Developer <br>
+              | Freelancer <br />
+            Tech Enthusiast | Data Analyst | Python Developer
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/Tusharsinghoffical" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/tusharsingh2011/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@tusharsinghoffical"
+              target="_blank
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="mailto:tusharsinghkumar04@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section links" data-aos="fade-up" data-aos-delay="100">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="freelancing.html">Freelancing</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-section services" data-aos="fade-up" data-aos-delay="200">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="projects.html">AI & Data Science</a></li>
+            <li><a href="projects.html">Web Development</a></li>
+            <li><a href="projects.html">Automation (AI Agents)</a></li>
+            <li><a href="freelancing.html">Freelancing</a></li>
+            <li><a href="projects.html">Python Solutions</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect + Newsletter -->
+        <div class="footer-section connect" data-aos="fade-up" data-aos-delay="300">
+          <h4>Connect</h4>
+          <p>Stay updated with my latest projects and insights</p>
+          <div class="newsletter">
+            <input type="email" placeholder="Enter your email" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>
+          © 2025 Code With Mr Singh. All rights reserved. | Designed with ❤️ Tushar
+          Singh
+        </p>
+      </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // Initialize AOS animations
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+
+      // Navbar menu toggle for mobile
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      const navLinksItems = document.querySelectorAll(".nav-links li a");
+
+      // Function to close mobile menu
+      function closeMobileMenu() {
+        navLinks.classList.remove("active");
+      }
+
+      // Function to toggle mobile menu
+      function toggleMobileMenu() {
+        navLinks.classList.toggle("active");
+      }
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", toggleMobileMenu);
+        
+        // Close menu when clicking on a nav link
+        navLinksItems.forEach(link => {
+          link.addEventListener("click", closeMobileMenu);
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!navLinks.contains(e.target) && !menuToggle.contains(e.target) && navLinks.classList.contains("active")) {
+            closeMobileMenu();
+          }
+        });
+      }
+
+      // Theme toggle
+      const themeBtn = document.getElementById("theme-toggle");
+      const html = document.documentElement;
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        html.setAttribute("data-theme", savedTheme);
+        themeBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+      } else {
+        html.setAttribute("data-theme", "light");
+      }
+
+      if (themeBtn) {
+        themeBtn.addEventListener("click", () => {
+          const currentTheme = html.getAttribute("data-theme");
+          const newTheme = currentTheme === "light" ? "dark" : "light";
+          html.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+          themeBtn.textContent = newTheme === "dark" ? "☀️" : "🌙";
+        });
+      }
+
+      // Project filtering
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const serviceCards = document.querySelectorAll(".service-card");
+
+      function applyFilter(filter) {
+        // Update button active states
+        filterButtons.forEach((btn) => {
+          const btnFilter = btn.getAttribute("data-filter");
+          if (btnFilter === filter) {
+            btn.classList.add("active");
+          } else {
+            btn.classList.remove("active");
+          }
+        });
+
+        // Show/hide cards
+        serviceCards.forEach((card) => {
+          const category = card.getAttribute("data-category");
+          if (filter === "all" || category === filter) {
+            card.style.display = "";
+            card.style.animation = "fadeIn 0.5s ease-in-out";
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        if (window.AOS && typeof AOS.refresh === "function") {
+          AOS.refresh();
+        }
+      }
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.getAttribute("data-filter");
+          applyFilter(filter);
+        });
+      });
+
+      // Add fadeIn animation
+      const style = document.createElement("style");
+      style.textContent = `
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    `;
+      document.head.appendChild(style);
+
+      // Add loading animation
+      window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+      });
+
+      // Newsletter subscription functionality
+      document.querySelectorAll('.newsletter button').forEach(button => {
+        button.addEventListener('click', function() {
+          const newsletterSection = this.closest('.newsletter');
+          const emailInput = newsletterSection.querySelector('input[type="email"]');
+          const email = emailInput.value.trim();
+          
+          // Simple email validation
+          if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+          
+          // Simulate subscription process
+          this.textContent = 'Subscribing...';
+          this.disabled = true;
+          
+          // In a real implementation, you would send the email to your backend here
+          // For now, we'll simulate a successful subscription
+          setTimeout(() => {
+            this.textContent = 'Subscribed!';
+            this.style.background = 'linear-gradient(135deg, #2ecc71, #27ae60)';
+            emailInput.value = '';
+            
+            // Reset button after 2 seconds
+            setTimeout(() => {
+              this.textContent = 'Subscribe';
+              this.disabled = false;
+              this.style.background = ''; // Reset to CSS gradient
+            }, 2000);
+          }, 1000);
+        });
+      });
+
+      // Debug: Check if all elements are loaded
+      console.log("Freelancing page loaded successfully");
+    </script>
+  </body>
+</html>
